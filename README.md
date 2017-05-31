@@ -1,4 +1,4 @@
-# svdRec
+# svdRec - A Recommender System
 
 This is a Python 3 based recommendation system based on Singular Value
 Decomposition (SVD). The module allows users to load from a CSV or from a numpy
