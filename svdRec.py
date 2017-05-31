@@ -102,7 +102,7 @@ class svdRec():
             final_rec = [i[0] for i in sorted(recs,key=lambda x: x[1],reverse=True)]
         return final_rec[:num_recom]
     
-    def recs_from_closest_user(self, userID):
+    def recs_from_closest_user(self, userID, num_users=1):
         if not self.decomp:
             raise ValueError("Must run SVD() before making recommendations!")
         userrecs = []
@@ -110,14 +110,15 @@ class svdRec():
             if user!= userID:
                 userrecs.append([user,self.user_similarity(userID,user)])
         final_rec = [i[0] for i in sorted(userrecs,key=lambda x: x[1],reverse=True)]
-        comp_user = final_rec[0]
+        comp_user = final_rec[:num_users]
         print("User #%s's most similar user is User #%s "% (userID, comp_user))
         data = self.mat.toarray()
-        rec_likes = data[comp_user]
         current = data[userID]
         recs = []
-        for i,item in enumerate(current):
-            if item != rec_likes[i] and rec_likes[i]!=0:
-                recs.append(i)
-        return recs
+        for user in comp_user:
+            rec_likes = data[user]
+            for i,item in enumerate(current):
+                if item != rec_likes[i] and rec_likes[i]!=0:
+                    recs.append(i)
+        return list(set(recs))
 
