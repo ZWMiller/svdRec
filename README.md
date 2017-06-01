@@ -12,8 +12,11 @@ similarity.
 
 An example of using this system can be found here: [Movie Lens
 Recommender](svdRec_example.ipynb). In short, given a user item matrix this
-module can reliably find similar items based on user input. Below, the ID for
-Toy Story 2 is input and the most similar items are _Toy Story_, _A Bug's Life_,
+module can reliably find similar items based on user input. It can also
+reliably find items that a user will be interested in based on their history
+with other items in the set.
+
+Below, the ID for Toy Story 2 is input and the most similar items are _Toy Story_, _A Bug's Life_,
 _Who Framed Roger Rabbit?_, and _Finding Nemo_. All of these are animated
 children's movies, with the majority being Pixar movies. 
 
