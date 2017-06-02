@@ -42,3 +42,19 @@ Who Framed Roger Rabbit? (1988)
 (6377, 0.040522854363774369)
 Finding Nemo (2003) 
 ```
+
+## Installation
+
+To install, just do `pip install svdRec` from the command line. This will also
+install `numpy` and `scipy` since they are required.
+
+To use, you have to do (it's currenly ugly, but I'm working on patching it for
+v0.2:
+
+```python
+from svdRec import svdRec
+
+svd = svdRec.svdRec()
+```
+
+From there, all the features are just as shown in the example notebook.

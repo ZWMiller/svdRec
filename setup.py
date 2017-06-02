@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'svdRec',
   packages = ['svdRec'], # this must be the same as the name above
-  version = '0.1',
+  version = '0.1.2',
   description = 'A Python3 Collaborative Recommendation Engine with Sparse Matrices',
   author = 'Zachariah Miller',
   author_email = 'zaglamir@gmail.com',
