@@ -49,7 +49,7 @@ To install, just do `pip install svdRec` from the command line. This will also
 install `numpy` and `scipy` since they are required.
 
 To use, you have to do (it's currenly ugly, but I'm working on patching it for
-v0.2:
+v0.2):
 
 ```python
 from svdRec import svdRec
